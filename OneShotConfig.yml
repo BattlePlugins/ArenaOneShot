@@ -4,15 +4,15 @@ configVersion: 2.0
 ## https://github.com/alkarinv/BattleArena/wiki
 ## Change this file to customize your event
 
-OneInTheChamber:
+OneShot:
     enabled: true
-    database: oitc # or delete if you dont want wins/losses/top, needs BattleTracker
+    database: os # or delete if you dont want wins/losses/top, needs BattleTracker
     rated: true # if database is enabled
-    prefix: "&7[OneInTheChamber]&e"
-    cmd: oitc
+    prefix: "&6[OneShot]&e"
+    cmd: os
     joinType: JoinPhase
-    victoryCondition: nLives
-    nLives: 3
+    victoryCondition: AllKills
+    nLives: infinite
     nTeams: 2+
     teamSize: 1
     ### You can delete any stages/transitions that have no options
@@ -34,6 +34,7 @@ OneInTheChamber:
         items: 
             - bow: 1
             - arrow: 1
+            - stone_axe: 1
     onDeath: ## what happens when a player dies
         options: [respawn, clearInventory]
     onComplete: ## what happens when things end

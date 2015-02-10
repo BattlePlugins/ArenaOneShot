@@ -1,9 +1,11 @@
-
+playerdeath:
+  item: arrow
+  amount: 1
 items:
   ## Set the arrow options
   arrow:
     damage: 20
     velocity: 3
-  iron_sword:
-    damage: 2
+  stone_axe:
+    damage: 4
   ### You can set more properties for other weapons below

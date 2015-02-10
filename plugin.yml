@@ -1,9 +1,11 @@
-name: ArenaOneInTheChamber
-main: mc.alk.oitc.OneInTheChamber
-version: 1.0
+name: ArenaOneShot
+main: mc.alk.oitc.OneShot
+version: 1.1
 depend: [BattleArena]
-authors: [alkarin_v]
-
+author: alkarinv
+authors: [adambor]
+description: Version 1.1 of oneshot
 commands:
-    oic:
-        aliases: [oitc]
+    os:
+        aliases: [oneshot]
+        usage: /os setItem <item name>

@@ -9,16 +9,18 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.HashMap;
 import java.util.Set;
-public class OneInTheChamber extends JavaPlugin{
-
+public class OneShot extends JavaPlugin{
+	
+	static OneShot plugin;
 	@Override
 	public void onEnable(){
+		plugin = this;
 		/// Registers this plugin with BattleArena
 		/// this: our plugin
 		/// "OneInTheChamber": The name of our competition
 		/// "oic": the name of our command alias
 		/// OITCArena.class: which arena should this competition use
-		BattleArena.registerCompetition(this, "OneInTheChamber", "oic", OITCArena.class);
+		BattleArena.registerCompetition(this, "OneShot", "os", OSArena.class, new OITC_commandHandler());
 
 		/// Load our config options
 		loadConfig();
@@ -40,7 +42,7 @@ public class OneInTheChamber extends JavaPlugin{
 	public void loadConfig(){
 		/// create our default config if it doesn't exist
 		saveDefaultConfig();
-
+		
 		FileConfiguration config = getConfig();
 		ConfigurationSection cs = config.getConfigurationSection("items");
 		Set<String> keys = cs.getKeys(false);
@@ -53,10 +55,12 @@ public class OneInTheChamber extends JavaPlugin{
 			if (dmg != -1)
 				damages.put(m, dmg);
 		}
-		OITCArena.damages=damages;
-        OITCArena.velocity = config.getDouble("items.arrow.velocity", OITCArena.velocity);
-        OITCArena.breakOnHit = config.getBoolean("items.arrow.breakOnHit", OITCArena.breakOnHit);
-		OITCArena.instantShot = config.getBoolean("bow.instantShoot", OITCArena.instantShot);
+		OSArena.damages=damages;
+        OSArena.velocity = config.getDouble("items.arrow.velocity", OSArena.velocity);
+        OSArena.num = config.getInt("playerdeath.amount", OSArena.num);
+        OSArena.item = config.getString("playerdeath.item", OSArena.item);
+        OSArena.breakOnHit = config.getBoolean("items.arrow.breakOnHit", OSArena.breakOnHit);
+		OSArena.instantShot = config.getBoolean("bow.instantShoot", OSArena.instantShot);
 	}
 
 }

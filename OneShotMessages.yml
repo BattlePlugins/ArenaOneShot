@@ -1,0 +1,10 @@
+version: 1.2
+
+OneShot:
+    double_kill: "&2Player %p has got DoubleKill !!!"
+    triple_kill: "&2Player %p has got TripleKill !!!"
+    quadra_kill: "&2Player %p has got QuadraKill !!!"
+    penta_kill: "&2Player %p has got PentaKill !!!"
+    higher_kill: "&2Player %p has got %kx Kill !!!"
+    ### Use %p to replace with player name
+    ### Use %k to replace with player killstreak

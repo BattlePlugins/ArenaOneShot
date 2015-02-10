@@ -2,10 +2,10 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>mc.alk</groupId>
-    <artifactId>ArenaOneInTheChamber</artifactId>
+    <artifactId>ArenaOneShot</artifactId>
     <packaging>jar</packaging>
-    <version>1.0.4.2</version>
-    <name>ArenaOneInTheChamber</name>
+    <version>1.1.0.0</version>
+    <name>ArenaOneShot</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -16,6 +16,10 @@
             <id>battleplugins-repo</id>
             <url>http://server.battleplugins.com/maven/repository/</url>
         </repository>
+         <repository>
+             <id>rainbowcraft-repo</id>
+             <url>http://rainbowcraft.sytes.net/maven/repository/</url>
+        </repository>
         <repository>
             <id>bukkit-repo</id>
             <url>http://repo.bukkit.org/content/groups/public</url>
@@ -25,15 +29,15 @@
     <dependencies>
         <!-- Dependencies that have maven repos -->
         <dependency>
-            <groupId>org.bukkit</groupId>
-            <artifactId>bukkit</artifactId>
-            <version>1.6.4-R0.1-SNAPSHOT</version>
-            <scope>provided</scope>
+             <groupId>org.bukkit</groupId>
+             <artifactId>bukkit</artifactId>
+             <version>1.7.5-R0.1-SNAPSHOT</version>
+             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>mc.alk</groupId>
             <artifactId>BattleArena</artifactId>
-            <version>[3.9.5.4,)</version>
+            <version>3.9.9.14</version>
             <scope>provided</scope>
         </dependency>
         <!-- unknown plugins that I had to add to the repo -->
@@ -80,8 +84,8 @@
     </build>
     <distributionManagement>
         <repository>
-            <id>battleplugins-repo</id>
-            <url>scp://server.battleplugins.com/var/www/server.battleplugins.com/htdocs/maven</url>
+            <id>rainbowcraft-repo</id>
+            <url>scp://23.29.127.102/var/www/maven/repository</url>
         </repository>
     </distributionManagement>
 </project>
