@@ -1,4 +1,5 @@
-# ArenaOneShot
+![alt tag](http://dev.bukkit.org/media/images/82/383/ArenaOneShot.png)
+
 A minigame that allows you to customize Bow & Arrows along with all other weapons. Players start with one highly damaging arrow (customizable) and receive another only once (customizable) they have killed someone else. The game can be a giant free for all, or you can have players be on specific teams to fight it out.
 
 You can modify almost all aspects of the game by editing the OneShotConfig.yml. Including what items they get, whether they get prizes, etc.
@@ -38,7 +39,7 @@ If you found any bug or want new feature to be added leave a comment or use tick
 
 ## Requirements
 
-This plugin is made to hook into BattleArena, so you also need to download it as well. http://dev.bukkit.org/bukkit-plugins/battlearena2/
+This plugin is made to hook into [BattleArena](http://dev.bukkit.org/bukkit-plugins/battlearena2/), so you also need to download it as well. 
 
 ## Official bukkit page
 http://dev.bukkit.org/bukkit-plugins/arenaoneshot/
