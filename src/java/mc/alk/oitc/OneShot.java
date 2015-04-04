@@ -10,7 +10,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 import java.util.HashMap;
 import java.util.Set;
 public class OneShot extends JavaPlugin{
-	
+
 	static OneShot plugin;
 	@Override
 	public void onEnable(){
@@ -42,7 +42,7 @@ public class OneShot extends JavaPlugin{
 	public void loadConfig(){
 		/// create our default config if it doesn't exist
 		saveDefaultConfig();
-		
+
 		FileConfiguration config = getConfig();
 		ConfigurationSection cs = config.getConfigurationSection("items");
 		Set<String> keys = cs.getKeys(false);

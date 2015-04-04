@@ -1,11 +1,14 @@
 playerdeath:
   item: arrow
   amount: 1
+bow:
+  instantShot: true
 items:
   ## Set the arrow options
   arrow:
     damage: 20
     velocity: 3
+    breakOnHit: true
   stone_axe:
     damage: 4
   ### You can set more properties for other weapons below
